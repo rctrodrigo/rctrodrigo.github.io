@@ -1,8 +1,16 @@
+@import url('https://fonts.cdnfonts.com/css/rubik-2');
+@import url('https://fonts.cdnfonts.com/css/outfit');
+
+/* Custom global properties/variables */
+:root {
+  --black: #212427;
+}
 * {
     box-sizing: border-box;
 }
 
 body {
+    /* Layout */
     margin: 0 auto;
     height: 100vh;
     max-width: 70%;
@@ -11,16 +19,76 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "nav nav nav" "social-section main tools-section" "footer footer footer";
     gap: 3px;
+
+    font-family: Rubik, Outfit, sans-serif; 
 }
 
 /** Navigation Section**/
-nav {
+.navbar {
+    /* Layout */
     border: solid 1px;
     grid-area: nav;
     margin-top: 2rem;
     min-height: 12vh;
+
+    /* Alignment of items */
+    display: flex;
+    justify-content: space-between;
+    
+    /* Container styles */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
+a {
+  color: var(--black); 
+  text-decoration: none;
+  font-weight: 700;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.navbar-wrapper {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 0.20rem;
+}
+
+.navbar-items {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.navbar-link {
+    margin-left: 0.756rem;
+}
+
+.navbar-link:hover, .navbar-link:focus {
+    color: #7e7e7e;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1.438em;
+  font-weight: 900;
+  padding-left: 0.586rem;
+}
+
+.hamburger-menu {
+    margin-left: 0.756rem;
+}
 /** Main Content **/
 main {
     border: solid 1px;
