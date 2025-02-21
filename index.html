@@ -5,18 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Static Portfolio: Raven Rodrigo</title>
         <!-- Cascading Style Sheets-->
-         <link href="styles/index.css" rel="stylesheet">
-         <!-- Fonts -->
-         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-         <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet" />
-         <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet" />
+        <link href="styles/index.css" rel="stylesheet">
+        <!-- JavaScript -->
+        <script src="script/index.js"></script>
     </head>
 
     <body>
       <!-- Navigation Section -->
         <nav class="navbar">
-          <a href="#" class="logo">RR.</a>
+          <a href="#" class="logo">Raven Rodrigo</a>
           <div class="navbar-wrapper">
             <ul class="navbar-items">
               <li class="navbar-items">
@@ -36,10 +33,30 @@
               </li>
             </ul>
           </div>
+          <div class="btn-wrapper">
+            <button id="btn-resume" class="btn-resume" onclick="openModal()">
+              <svg class="resume-icon" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" 
+              stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg> 
+              <a href="#" class="resume-link">Resume</a>  
+            </button> 
+          </div>
         </nav>
+        <!-- Resume Modal --> 
+            <div id="modal-resume" class="modal-resume">
+                <div id="modal-resume-content" class="modal-resume-content">
+                  <button class="close-modal" onclick="closeModal()">&times;</button>
+                  <iframe src="assets/RavenRodrigo_Resume.pdf"></iframe>
+                </div>
+            </div>
         <div class="social-section-container"> Social and Contact Section </div>
         <main>Projects and Blog Section</main>
         <div class="tools-section-container">Skills and Tools Section</div>
-        <footer>Footer Section</footer>
+        <footer>Footer Section</footer> 
     </body>
 </html>
